@@ -9,5 +9,5 @@ class Solution:
 
             seen[num]=i
 
-        return []
+        
         
