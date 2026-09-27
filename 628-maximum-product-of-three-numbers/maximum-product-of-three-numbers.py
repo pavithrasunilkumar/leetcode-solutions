@@ -1,10 +1,7 @@
 class Solution:
     def maximumProduct(self, nums: list[int]) -> int:
-        largest=float('-inf')
-        second=float('-inf')
-        third=float('-inf')
-        smallest = float('inf')
-        secondsmallest = float('inf')
+        largest,second,third=float('-inf'),float('-inf'),float('-inf')
+        smallest,secondsmallest = float('inf'),float('inf')
         for i in range(len(nums)):
              if nums[i]>largest:
                 third=second
