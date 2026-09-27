@@ -1,31 +1,32 @@
 class Solution:
     def thirdMax(self, nums: List[int]) -> int:
-        first=float("-inf")
-        second=float("-inf")
-        third=float("-inf")
-
-        for num in nums:
-            if first==num or second==num or third==num:
+        largest=float('-inf')
+        second=float('-inf')
+        third=float('-inf')
+        for i in range(len(nums)):
+            if nums[i] == largest or nums[i] == second or nums[i] == third:
                 continue
-
-            if num>first:
-                third=second
-                second=first
-                first=num
                 
-
-            elif num>second:
+            if nums[i]> largest:
                 third=second
-                second=num
+                second=largest
+                largest=nums[i]
 
-            elif num > third:
-                third = num
+            elif nums[i]>second and nums[i]!=largest:
+                 third=second
+                 second=nums[i]
 
+            elif nums[i] > third and nums[i] != second:
+                 third = nums[i]
+                
         if third == float('-inf'):
-            return first
+            return largest
+
 
         return third
-
-
-
         
+        
+        
+        
+
+       
