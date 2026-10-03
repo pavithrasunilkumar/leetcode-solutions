@@ -19,7 +19,7 @@ def rotate(self, nums: list[int], k: int) -> None:
 def rotate(self, nums: list[int], k: int) -> None:
 
         n = len(nums)
-        k = k % n
+        k = n%k
 
         def reverse(left, right):
             while left < right:
