@@ -2,8 +2,7 @@ class Solution:
     def rearrangeArray(self, nums: list[int]) -> list[int]:
         n=len(nums)
         num=[0]*n
-        pos=0
-        neg=1
+        pos,neg=0,1
         for i in range(n):
             if nums[i]>=0:
                 num[pos]=nums[i]
