@@ -3,12 +3,12 @@ class Solution:
         n=len(nums)
         num=[0]*n
         pos,neg=0,1
-        for i in range(n):
-            if nums[i]>=0:
-                num[pos]=nums[i]
+        for i in nums:
+            if i>=0:
+                num[pos]=i
                 pos+=2
             else:
-                num[neg]=nums[i]
+                num[neg]=i
                 neg+=2
         return num
 
